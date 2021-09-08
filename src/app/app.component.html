@@ -1,119 +1,46 @@
-<div class="columns">
 
-  <div class="column">
+<div class="flex-content">
+  <div class="box nav-menu">
 
-    <section class="hero">
-      <div class="hero-body">
-        <div class="container">
-            <div class="box">
-            <!-- <img class="is-square" src="../assets/images/AG.png"> -->
-            <h1 class="title is-2">
-             Abraham Gómez
-            </h1>
-            <h2 class="subtitle has-text-info-dark">
-              Front-End Developer <br>  
-            </h2>
-            <h2 class="subtitle">
-              JavaScript lover 💻 
-            </h2>
-            <nav class="breadcrumb is-large" aria-label="breadcrumbs">
-              <ul>
-                <li class="is-active"><a href="#">Proyectos</a></li>
-                <li><a href="#" class="has-text-info-dark">Conóceme</a></li>
-                <li><a href="#" class="has-text-info-dark">habilidades</a></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section class="section">
-      <div class="container">
+    <!-- <div class="nav-menu-img"></div> -->
+    <img src="../assets/images/profile.jpg" alt="abraham-gome-profile" class="nav-menu-img">
 
-        <div class="box">
+    <p class="nav-menu-title">
+      Abraham Gómez
+    </p>
+    <p class="nav-menu-sub-title">
+      Software Developer
+    </p>
 
-          <h1 class="title">Contactame</h1>
-          
-          <div class="columns is-mobile is-multiline is-centered">
-            <div class="column">
-              <span class="icon has-text-info-dark">
-                <i class="fab fa-3x fa-linkedin"></i>
-              </span>
-            </div>
-            <div class="column">
-              <span class="icon has-text-info-dark">
-                <i class="fab fa-3x fa-github-square"></i>
-              </span>
-            </div>
-            <div class="column">
-              <span class="icon has-text-info-dark">
-                <i class="fab fa-3x fa-twitter-square"></i>
-              </span>
-            </div>
-            <div class="column">
-              <span class="icon has-text-info-dark">
-                <i class="fas fa-3x fa-envelope-square"></i>
-              </span>
-            </div>
-          </div>
+    <aside class="menu">
+      <ul class="menu-list">
+        <li><a [routerLink]="['/home']" routerLinkActive="is-active">Home</a></li>
+        <li><a [routerLink]="['/about']" routerLinkActive="is-active" >About me</a></li>
+        <li>
+          <a [routerLink]="['/proyect']" routerLinkActive="is-active">Projects</a>
+        </li>
+        <li>
+          <a>Contact me</a>
+          <ul>
+            <li><a href="https://github.com/abraham1432" target="_blank"> <i class="fab fa-github github"></i> Github</a></li>
+            <li><a href="https://www.linkedin.com/in/abraham-gomez1432/" target="_blank"><i class="fab fa-linkedin linkedIn"></i> LinkedIn</a></li>
+            <li><a href="https://twitter.com/jgomez1432" target="_blank"><i class="fab fa-twitter twitter"></i> Twitter</a></li>
+            <li><a href="mailto:gomezabraham1432@protonmail.com" target="_blank"><i class="fas fa-envelope email"></i> E-mail</a></li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
 
-        </div>
-        
-      </div>
-    </section>
+    <p class="nav-menu-verion">
+      V {{verion}}
+    </p>
 
   </div>
 
-  <div class="column is-8">
-    
-    
-    <section class="section">
-      <div class="container">
-
-          <div class="columns">
-
-          <div class="column">
-            <div class="box">
-              <h1 class="title has-text-info-dark">MedicalBridge</h1>
-              <hr>
-              <h3 class="subtitle is-4">Proyecto para agendar consultorios especializados a médicos, gestion de citas y roles de usuarios.</h3> 
-              
-              <div class="field is-grouped is-grouped-multiline">
-                <div class="control" *ngFor="let stack of stackMedic">
-                  <div class="tags has-addons">
-                    <span class="tag is-link">{{stack}}</span>
-                  </div>
-                </div>
-              </div>
-          
-            </div>
-          </div>
-
-          <div class="column is-6">
-            <div class="box">
-              <h1 class="title has-text-info-dark">MedicalBridge</h1>
-              <hr>
-              <h3 class="subtitle is-4">Proyecto para agendar consultorios especializados a médicos, gestion de citas y roles de usuarios.</h3> 
-              
-              <div class="field is-grouped is-grouped-multiline">
-                <div class="control" *ngFor="let stack of stackMedic">
-                  <div class="tags has-addons">
-                    <span class="tag is-link">{{stack}}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-  
-        </div>
-
-        </div>
-      </section>
-
-
+  <div class="background-img">
+    <router-outlet></router-outlet>
   </div>
 
 </div>
 
-<router-outlet></router-outlet>
+

@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+// Colors
+$blue-primary: rgb(61,132,169);
+$green-primary: rgb(105,168,85);
+$purple-primary: rgb(91,54,84);
+$blue-secondary: rgb(21,142,163);
+$white:#ffffff;
+
+
+@mixin flexBox($direction : row, $justify-content: 'flex-start', $align-items : 'center', $align-content: 'center') {
+    
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    align-content: $align-content;
+
+}

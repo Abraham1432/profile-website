@@ -1,19 +1,22 @@
 import { Component } from '@angular/core';
 
+import { version } from '../../package.json';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
- 
-  stackMedic:string[] = ["Angular", "node.js", "Firebase", "Angular Material", "Google API Calendar"] 
+
+  verion: string = version;
+
 
   constructor(){
 
+    console.log('a');
+
   }
 
-
-  
 
 }
